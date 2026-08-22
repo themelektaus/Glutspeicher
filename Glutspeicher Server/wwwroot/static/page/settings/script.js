@@ -13,6 +13,7 @@ class SettingsPage extends Page
         this.$autoTypeOnConnect = this.$.query(`.autoTypeOnConnect`)
         
         this.$animations = this.$.query(`.animations`)
+        this.$mobile = this.$.query(`.mobile`)
         
         this.$rebuildDatabase = this.$.query(`.rebuildDatabase`)
         this.$downloadDatabase = this.$.query(`.downloadDatabase`)
@@ -40,6 +41,15 @@ class SettingsPage extends Page
             App.updateBody()
         })
         
+        this.$mobile.checked = this.data.mobile
+        this.$mobile.on(`change`, () =>
+        {
+            this.data.page = `settings`
+            this.data.mobile = this.$mobile.checked
+            this.data.save()
+            App.updateBody()
+        })
+        
         this.$rebuildDatabase.on(`click`, async () =>
         {
             await fetch(`api/database/rebuild`)
@@ -56,6 +66,7 @@ class SettingsPage extends Page
         this.$autoTypeOnConnect.off(`change`)
         
         this.$animations.off(`change`)
+        this.$mobile.off(`change`)
         
         this.$rebuildDatabase.off(`change`)
         this.$downloadDatabase.off(`change`)

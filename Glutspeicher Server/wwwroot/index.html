@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Glutspeicher</title>
+        <link rel="shortcut icon" href="static/favicon.svg" type="image/x-icon">
         <link rel="stylesheet" href="static/css/style.scss">
         <script src="static/js/script.js"></script>
         <script src="static/jsOTP.min.js"></script>
@@ -16,33 +17,43 @@
         <div id="app">
             <nav>
                 <ul>
-                    <li data-link="passwords">Passwords</li>
-                    <li data-link="exports">Exports</li>
-                    <li data-link="generators">Generators</li>
-                    <li data-link="relays">Relays</li>
-                    <li data-link="settings">Settings</li>
+                    <li data-link="passwords">
+                        <span class="text">Passwords</span>
+                    </li>
+                    <li data-link="exports">
+                        <span class="text">Exports</span>
+                    </li>
+                    <li data-link="generators">
+                        <span class="text">Generators</span>
+                    </li>
+                    <li data-link="relays">
+                        <span class="text">Relays</span>
+                    </li>
+                    <li data-link="settings">
+                        <span class="text">Settings</span>
+                    </li>
                 </ul>
                 <a href="//hub.docker.com/r/melektaus/glutspeicher" target="_blank">
-                     <span style="background-image: url(static/res/docker.svg); "></span>
-                    Docker
+                    <span style="background-image: url(static/res/docker.svg); "></span>
+                    <span class="text">Docker</span>
                 </a>
                 <a href="//github.com/themelektaus/glutspeicher" target="_blank">
                     <span style="background-image: url(static/res/github.svg); "></span>
-                    Source
+                    <span class="text">Source</span>
                 </a>
                 <a href="static/glutspeicher-client-for-windows.zip">
                     <span style="background-image: url(static/res/download.svg); "></span>
-                    Client for Windows
+                    <span class="text">Client for Windows</span>
                     <span class="version" CLIENT_VERSION></span>
                 </a>
                 <a href="static/glutspeicher-server-for-windows.zip">
                     <span style="background-image: url(static/res/download.svg); "></span>
-                    Server for Windows
+                    <span class="text">Server for Windows</span>
                     <span class="version" SERVER_VERSION></span>
                 </a>
                 <a href="static/glutspeicher-server-for-linux.zip">
                     <span style="background-image: url(static/res/download.svg); "></span>
-                    Server for Linux
+                    <span class="text">Server for Linux</span>
                     <span class="version" SERVER_VERSION></span>
                 </a>
             </nav>

@@ -736,7 +736,13 @@ class PasswordsPage extends Page
             this.dialog.busy = true
             
             const data = { id: item.id }
-            form.$inputs.forEach($ => data[$.classList[0]] = $.type == `number` ? +$.value : $.value)
+            form.$inputs.forEach($ =>
+            {
+                if ($.classList[0] != `id`)
+                {
+                    data[$.classList[0]] = $.type == `number` ? +$.value : $.value
+                }
+            })
             
             data.generatorId = parseInt(form.$generator.getData(`value`))
             data.relayId = parseInt(form.$relay.getData(`value`))

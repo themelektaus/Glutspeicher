@@ -1,0 +1,55 @@
+body.mobile {
+    zoom: .85;
+    border: 1.5px solid orange;
+    border-right-width: 2px;
+    border-bottom-width: 2.5px;
+    box-sizing: border-box;
+    
+    nav {
+        width: 3.5em;
+        min-width: 3.5em;
+        max-width: 3.5em;
+        
+        .text {
+            opacity: 0;
+        }
+        
+        li::before {
+            position: absolute;
+            translate: -.5em 0;
+            text-align: right;
+            display: block;
+            width: 1.75em;
+        }
+        
+        li:nth-child(1)::before {
+            content: 'Pw';
+        }
+        
+        li:nth-child(2)::before {
+            content: 'Ex';
+        }
+        
+        li:nth-child(3)::before {
+            content: 'Gen';
+        }
+        
+        li:nth-child(4)::before {
+            content: 'Rly';
+        }
+        
+        li:nth-child(5)::before {
+            content: 'Set';
+        }
+        
+        a {
+            display: none;
+        }
+    }
+
+    [data-page="passwords"] {
+        .content .items .item {
+            grid-template-columns: 3fr 2fr 1fr 8.5em 2fr 0 0;
+        }
+    }
+}

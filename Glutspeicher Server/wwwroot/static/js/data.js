@@ -7,6 +7,7 @@ class Data
         this.page = data?.page ?? `passwords`
         this.autoTypeOnConnect = data?.autoTypeOnConnect ?? false
         this.animations = data?.animations ?? true
+        this.mobile = data?.mobile ?? false
     }
     
     static load()

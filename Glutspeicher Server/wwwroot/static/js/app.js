@@ -342,7 +342,9 @@ class App
     
     static updateBody()
     {
-        $body.setClass(`animations`, Data.load().animations)
+        const data = Data.load()
+        $body.setClass(`animations`, data.animations)
+        $body.setClass(`mobile`, data.mobile)
         $body.setClass(`debug`, DEBUG)
     }
     

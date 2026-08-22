@@ -31,4 +31,13 @@ public partial class Password
     public string Section { get; set; }
 
     public long RelayId { get; set; }
+
+    [BsonIgnore]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public _GlutLinks GlutLinks { get; set; }
+    public class _GlutLinks
+    {
+        public string AutoType { get; set; }
+        public string Connect { get; set; }
+    }
 }

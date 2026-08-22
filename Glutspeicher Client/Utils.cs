@@ -87,7 +87,7 @@ public static class Utils
             return null;
         }
 
-        var jsonData = Convert.FromBase64String(uri[7..].TrimEnd("/"));
+        var jsonData = Convert.FromBase64String(uri[7..].TrimEnd('/'));
         var json = Encoding.GetEncoding(1252).GetString(jsonData);
         return JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(json);
     }
